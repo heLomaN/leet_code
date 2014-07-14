@@ -3,11 +3,11 @@ class Solution
 public:
   char *strStr (char *haystack, char *needle)
   {
-        char *p = NULL;
+        char *p = haystack;
         int lh = strlen(haystack);
         int ln = strlen(needle);
 
-        if(lh == 0 || ln ==0)
+        if(ln ==0)
             return p;
         for(int i = 0;i < lh-ln+1;i++){
             int j = 0;
@@ -19,7 +19,7 @@ public:
                 return p;
             }
         }
-        return p;
+        return NULL;
                 
   }
 };
